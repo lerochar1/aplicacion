@@ -1,0 +1,47 @@
+<section class="formWrapper">
+    <h2 id="shopByVTitle">
+        Seleccione Especialidad
+    </h2>
+    <p id="backText">
+        Atras
+    </p>
+    <div class="clear">
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <select (change)="capturar()" class="visible"  (ngModel)="opcionSeleccionado">
+                <!-- <option value="value0">-Seleccione Especialidad-</option> -->
+                <option *ngFor="let dato of especialidad">
+                    {{dato}}
+                </option>
+                <!-- <option value="value1">-Seleccione el servicio-</option>
+                <option value="value2">afiliacion</option>
+                <option value="value3">portabilidad</option>
+                <option value="value4">credito</option>
+                <option value="value5">subsidio monetario</option>
+                <option value="value6">subsidio vivienda</option>
+                <option value="value7">aportes</option>
+                <option value="value8">capacitacion</option>
+                <option value="value9">turismo</option>
+                <option value="value10">espacios deportivos</option>
+                <option value="value11">agencia de viajes</option> -->
+            </select>
+        </div>
+    </div>
+    <div class="col-12">
+        <h3>Seleccione Doctor a Cargo</h3>
+    </div>
+    <div class="row">
+        <div class="col-10">
+            <select name="combo0" id="combo_0" class="visible">
+                <option value="value0">-Seleccione Doctor-</option>
+                <option *ngFor="let dataso of Neumologia">
+                    {{dataso}}
+                </option>
+            </select>
+        </div>
+        <div class="inputbtn col-2">
+            <input routerLink='/datetime' type="button" name="Select" value="GO" onclick="go()" />
+        </div>
+    </div>
+</section>
